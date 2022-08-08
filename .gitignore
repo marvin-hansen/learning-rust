@@ -12,3 +12,7 @@ Cargo.lock
 .idea
 .idea/
 .idea/*
+
+/helloworld/hello_cargo/target/
+/helloworld/main
+/guessing_game/target/
