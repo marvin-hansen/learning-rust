@@ -16,3 +16,4 @@ Cargo.lock
 /helloworld/hello_cargo/target/
 /helloworld/main
 /guessing_game/target/
+/variables/target/
