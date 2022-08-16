@@ -1,6 +1,4 @@
-
 fn main() {
-
     variables();
     constant();
     shadowing();
@@ -13,14 +11,14 @@ fn main() {
     loop_example();
 }
 
-fn variables() -> (){
+fn variables() -> () {
     let mut x = 5;
     println!("The value of x is: {x}");
     x = 6;
     println!("The value of x is: {x}");
 }
 
-fn constant() -> (){
+fn constant() -> () {
     // const
     // * must be type annotated
     // * cannot be mut
@@ -29,7 +27,7 @@ fn constant() -> (){
     println!("The value of SUB_COUNT is: {SUB_COUNT}");
 }
 
-fn shadowing() -> (){
+fn shadowing() -> () {
     // shadowing
     let z = 5;
     println!("The value of z is: {z}");
@@ -37,7 +35,7 @@ fn shadowing() -> (){
     println!("The value of z is: {z}");
 }
 
-fn scalars() -> (){
+fn scalars() -> () {
     // Int
     let _a = 98_222; // Decimal
     let _b = 0xff; // Hex
@@ -99,7 +97,7 @@ fn scalars() -> (){
     println!("heart_eyed_cat {}", heart_eyed_cat);
 }
 
-fn compound() -> (){
+fn compound() -> () {
     // tuples
     let tup: (i32, f64, u8) = (500, 6.4, 1);
     let (_x, y, _z) = tup;
@@ -116,45 +114,45 @@ fn compound() -> (){
     // dynamically sized array
     // value 0
     // size 8
-    let byte = [0;8];
+    let byte = [0; 8];
     println!("The value of index 0 is: {}", byte[0]);
     println!("The value of index 3 is: {}", byte[3]);
     println!("The value of index 7 is: {}", byte[7]);
 }
 
-fn my_function(x: i32, y: i32) -> i32{
+fn my_function(x: i32, y: i32) -> i32 {
     // statement, no return
     println!("The value of x is: {x}");
     println!("The value of y is: {y}");
 
     // expression, returns
-    x+y
+    x + y
 }
 
-fn control_flow(number: i32){
-    if number < 10{
+fn control_flow(number: i32) {
+    if number < 10 {
         println!("first condition was true!");
     } else if number < 22 {
         println!("Second condition was true");
-    } else{
+    } else {
         print!("condition was false ");
     }
 }
 
-fn conditional_let(){
+fn conditional_let() {
     let condition = true;
-    let number = if condition {5} else { 7 };
+    let number = if condition { 5 } else { 7 };
     println!("The number is: {}", number);
 }
 
 fn loop_example() -> () {
-    let mut counter =0;
+    let mut counter = 0;
 
-   let result = loop{
-        counter +=1;
+    let result = loop {
+        counter += 1;
         println!("Looping");
 
-        if counter == 10{
+        if counter == 10 {
             break counter;
         }
     };
@@ -162,19 +160,18 @@ fn loop_example() -> () {
     println!("result = {}", result);
 
     let mut number = 3;
-    while number != 0{
+    while number != 0 {
         println!("number = {}", number);
-        number -=1;
+        number -= 1;
     }
     println!("Liftoff");
 
     let a = [10, 20, 30, 40, 50];
-    for element in a.iter(){
+    for element in a.iter() {
         println!("The value is : {}", element);
     }
 
-    for number in 1..4{
+    for number in 1..4 {
         println!("{}", number)
     }
-
 }

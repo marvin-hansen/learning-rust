@@ -1,4 +1,3 @@
-
 fn main() {
     //    Ownership rules
     // 1. Each value in Rust has a variable that's called its owner.
@@ -16,10 +15,9 @@ fn main() {
     change_read_write_ref();
 
     slice_function();
-
 }
 
-fn stack_heap() -> (){
+fn stack_heap() -> () {
     { // s not declared yet
         // s string literal, fixed in size, and stored directly in the binary.
         // stored on the stack.
@@ -34,7 +32,7 @@ fn stack_heap() -> (){
     } // this scope is now over, and s is no longer valid
 }
 
-fn copy_val_ref() -> (){
+fn copy_val_ref() -> () {
     let x = 5;
     println!("create X: {}", x);
 
@@ -60,29 +58,29 @@ fn copy_val_ref() -> (){
     println!("print s3: {}", s3);
 }
 
-fn function_ownership() -> (){
+fn function_ownership() -> () {
     let s = String::from("hello");
     //takes_ownership(s); // Moves ownership to function.
     println!("{}", s); // Error:  value borrowed here after move
 }
 
-fn takes_ownership(some_string: String) ->(){
+fn takes_ownership(some_string: String) -> () {
     println!("{}", some_string)
 } // Here, some_string goes out of scope and `drop` is called.
 // The backing memory is freed.
 
-fn function_copy() -> (){
+fn function_copy() -> () {
     // primitives implement implicitly the copy trait
     let some_integer = 5;
     makes_copy(some_integer); // an actual copy happens
     println!("{}", some_integer); // this works because some_integer never moved anywhere
 } // here the integer goes out of scope and memory will be freed.
 
-fn makes_copy(some_integer: i32){ // some_integer comes into scope
+fn makes_copy(some_integer: i32) { // some_integer comes into scope
     println!("{}", some_integer)
 } // Here, some_integer goes out of scope. Nothing special happens.
 
-fn function_move_ownership() -> (){
+fn function_move_ownership() -> () {
     let s1 = gives_ownership(); // receives the ownership from function.
     let s2 = String::from("hello"); // creates new string owned by s2
     let s3 = takes_and_gives_back(s2); // moves s2 to function, but function returns ownership to s3.
@@ -92,17 +90,17 @@ fn function_move_ownership() -> (){
     println!("{}", s3); // S3 in scope and points to the string declared above.
 }
 
-fn gives_ownership() -> (String){
+fn gives_ownership() -> (String) {
     let some_string = String::from("yours");
-    return some_string
+    return some_string;
 }
 
 // This function takes a String and returns one
-fn takes_and_gives_back(a_string: String) -> (String){ // a_string comes into scope
-   return a_string // a_string is returned and moves out to the calling function
+fn takes_and_gives_back(a_string: String) -> (String) { // a_string comes into scope
+    return a_string; // a_string is returned and moves out to the calling function
 }
 
-fn function_poly_return() -> (){
+fn function_poly_return() -> () {
     let s1 = String::from("hello");
 
     let (s2, len) = calculate_length(s1);
@@ -111,13 +109,13 @@ fn function_poly_return() -> (){
     println!("The length of '{}' is {}.", s2, len);
 }
 
-fn calculate_length(s: String) -> (String, usize){
+fn calculate_length(s: String) -> (String, usize) {
     let length = s.len(); // len() returns the length of a String
     // we cannot call return (s, s.len()) as it would amount to use after move
-    return (s, length)
+    return (s, length);
 }
 
-fn function_ref_with_return() -> (){
+fn function_ref_with_return() -> () {
     // s1 comes into scope
     let s1 = String::from("hello");
 
@@ -128,13 +126,13 @@ fn function_ref_with_return() -> (){
     println!("The length of '{}' is {}.", s1, len);
 }
 
-fn calculate_length_ref(s: &String) -> usize{ // s is a read-only reference to a String
+fn calculate_length_ref(s: &String) -> usize { // s is a read-only reference to a String
     return s.len(); // Rust de-ref s automatically.
     // Here, s goes out of scope. But because it does not have ownership of what
     // it refers to, it is not dropped.
 }
 
-fn function_mut_ref() -> (){
+fn function_mut_ref() -> () {
     // creating a new string.
     let mut s = String::from("Hello");
     // we only pass one mut ref.
@@ -149,7 +147,7 @@ fn change(mut_string: &mut String) { // here we take a mutable reference to a st
     mut_string.push_str(", world!");
 }
 
-fn change_mut_error() -> (){
+fn change_mut_error() -> () {
     let mut s = String::from("Hello");
     let r1 = &mut s; // ok
     let r2 = &mut s; // no error yet
@@ -166,14 +164,14 @@ fn change_mut_error() -> (){
     println!("{}", r2); // ok
 }
 
-fn change_read_write_ref() -> (){
+fn change_read_write_ref() -> () {
     let mut s = String::from("hello");
 
     let r1 = &s; // no problem
     let r2 = &s; // no problem
     let r3 = &mut s; // BIG PROBLEM
 
-   // println!("{}, {}, and {}", r1, r2, r3); //  cannot borrow `s` as mutable because it is also borrowed as immutable
+    // println!("{}, {}, and {}", r1, r2, r3); //  cannot borrow `s` as mutable because it is also borrowed as immutable
 
 
     let r1 = &s; // no problem
@@ -186,7 +184,7 @@ fn change_read_write_ref() -> (){
     }
 }
 
-fn function_dangle_err() -> (){
+fn function_dangle_err() -> () {
     let ref_to_nothing = dangle();
 }
 
@@ -212,8 +210,7 @@ fn dangle() -> String {
 
 // Slices
 
-fn slice_function(){
-
+fn slice_function() {
     let s = String::from("hello world");
 
     let hello = &s[0..5];
@@ -244,14 +241,13 @@ fn slice_function(){
 
     assert_eq!(slice, &[2, 3]);
     println!("ok!")
-
 }
 
-fn first_word_sized(s: &String) -> usize{
+fn first_word_sized(s: &String) -> usize {
     let bytes = s.as_bytes();
 
-    for (i, &item) in bytes.iter().enumerate(){
-        if item == b' '{
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
             return i;
         }
     }

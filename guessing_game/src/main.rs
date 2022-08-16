@@ -1,7 +1,8 @@
-use colored::*;
-use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
+
+use colored::*;
+use rand::Rng;
 
 fn main() {
     println!("Guess the number!");
@@ -21,17 +22,17 @@ fn main() {
             .expect("Failed to read line");
 
         // convert string to unsigned integer
-        let guess:u32 = match read_guess.trim().parse(){
+        let guess: u32 = match read_guess.trim().parse() {
             Ok(num) => num, // if ok, return the number
             Err(_) => continue, // if not, skip & read line again in next inter of the loop
         };
 
         // compare the guess to the secret number
         match guess.cmp(&secret_number) {
-            Ordering::Less => {println!("{}", "Too small!".red())}
-            Ordering::Greater => { print!("{}","Too big!".red());}
+            Ordering::Less => { println!("{}", "Too small!".red()) }
+            Ordering::Greater => { print!("{}", "Too big!".red()); }
             Ordering::Equal => {
-                println!("{}","You win!".green());
+                println!("{}", "You win!".green());
                 break; // exit the program
             }
         }

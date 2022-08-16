@@ -1,51 +1,48 @@
-
 #[derive(Debug, Clone, PartialEq)]
-struct User{
+struct User {
     username: String,
     email: String,
     signed_int_count: u64,
     active: bool,
 }
 
-fn build_user(email: String, username: String) -> User{
-    User{
+fn build_user(email: String, username: String) -> User {
+    User {
         username,
         email,
         signed_int_count: 1,
-        active: true
+        active: true,
     }
-
 }
 
 #[derive(Debug, Clone, PartialEq)]
-struct Rectangle{
+struct Rectangle {
     width: u32,
     height: u32,
 }
 
 impl Rectangle {
-    fn area(&self) -> u32{
-        return self.width * self.height
+    fn area(&self) -> u32 {
+        return self.width * self.height;
     }
 
-    fn can_hold(&self, other: &Rectangle) -> bool{
-      return self.width > other.width && self.height > other.height
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        return self.width > other.width && self.height > other.height;
     }
-
 }
 
-impl Rectangle{
-    fn square(size: u32) -> Rectangle{
-        return Rectangle{width: size, height: size}
+impl Rectangle {
+    fn square(size: u32) -> Rectangle {
+        return Rectangle { width: size, height: size };
     }
 }
 
 fn main() {
-   let user1 = User{
+    let user1 = User {
         username: "Bogan".to_string(),
         email: "boagan@gmail.com".to_string(),
         signed_int_count: 1,
-        active: true
+        active: true,
     };
 
     let _name = user1.username.clone();
@@ -67,7 +64,7 @@ fn main() {
 
     println!("{:#?}", user2);
 
-    let user3 = User{
+    let user3 = User {
         email: String::from("james@mail.com"),
         username: String::from("James"),
         ..user2 // carry over all remaining values from user2
@@ -80,7 +77,7 @@ fn main() {
     struct Color(i32, i32, i32);
     struct Point(i32, i32, i32);
 
-    let rect = Rectangle{width: 30, height: 50};
+    let rect = Rectangle { width: 30, height: 50 };
     println!("{:#?}", rect);
 
     println!(
@@ -88,8 +85,8 @@ fn main() {
         rect.area()
     );
 
-    let rect1 = Rectangle{width: 20, height: 40};
-    let rect2 = Rectangle{width: 40, height: 50};
+    let rect1 = Rectangle { width: 20, height: 40 };
+    let rect2 = Rectangle { width: 40, height: 50 };
 
     println!("rect can hold rect1 {} ", rect.can_hold(&rect1));
     println!("rect can hold rect2 {} ", rect.can_hold(&rect2));
