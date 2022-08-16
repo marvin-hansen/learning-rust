@@ -22,6 +22,7 @@ struct Rectangle {
 }
 
 impl Rectangle {
+    // methods have &self reference
     fn area(&self) -> u32 {
         return self.width * self.height;
     }
@@ -32,6 +33,7 @@ impl Rectangle {
 }
 
 impl Rectangle {
+    // Associated functions don't hold a reference to self
     fn square(size: u32) -> Rectangle {
         return Rectangle { width: size, height: size };
     }
@@ -51,8 +53,7 @@ fn main() {
 
 
     // structs are immutable by default.
-    // for immutability:
-
+    // for mutability at mut keyword:
     let mut user = user1.clone();
 
     user.username = String::from("NewUserName");

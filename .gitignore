@@ -19,3 +19,4 @@ Cargo.lock
 /variables/target/
 /ownership/target/
 /structs/target/
+/enums/target/
