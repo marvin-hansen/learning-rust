@@ -18,3 +18,4 @@ Cargo.lock
 /guessing_game/target/
 /variables/target/
 /ownership/target/
+/structs/target/
