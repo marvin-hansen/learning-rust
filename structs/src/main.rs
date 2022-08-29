@@ -1,3 +1,5 @@
+mod node;
+
 #[derive(Debug, Clone, PartialEq)]
 struct User {
     username: String,
