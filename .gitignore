@@ -24,3 +24,6 @@ Cargo.lock
 /enums/target/
 /constraints/target/
 /modules/target/
+/modules/auth_service/target/
+/modules/restaurant/target/
+/collections/target/
