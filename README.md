@@ -9,7 +9,11 @@
 7. [Packages, crates, and modules](modules)
 8. [Common Collections](collections)
 9. [Error Handling](errors)
-10. [Generic Types](generics)
+10. [Generics, Traits, and Lifelines]()
+    1. [Generic Types](generics)
+    2. [Traits](traits)
+    3. [Lifelines](lifelines)
+
 
 ## Addition materials
 * [constraints](constraints)
