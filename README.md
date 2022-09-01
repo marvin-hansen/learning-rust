@@ -9,6 +9,7 @@
 7. [Packages, crates, and modules](modules)
 8. [Common Collections](collections)
 9. [Error Handling](errors)
+10. [Generic Types](generics)
 
 ## Addition materials
 * [constraints](constraints)
