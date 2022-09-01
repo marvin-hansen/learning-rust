@@ -17,13 +17,8 @@ Cargo.lock
 /helloworld/hello_cargo/target/
 /helloworld/main
 
-/guessing_game/target/
-/variables/target/
-/ownership/target/
-/structs/target/
-/enums/target/
-/constraints/target/
-/modules/target/
-/modules/auth_service/target/
-/modules/restaurant/target/
-/collections/target/
+/*/target/
+/*/target/*
+/modules/*/target/
+/modules/*/target/*
+

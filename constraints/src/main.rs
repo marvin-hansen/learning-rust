@@ -1,5 +1,7 @@
 use std::fmt;
 
+mod guess;
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 struct BoundError {
     value: u32,

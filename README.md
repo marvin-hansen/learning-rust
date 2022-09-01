@@ -8,14 +8,15 @@
 6. [Enums and Pattern Matching](enums)
 7. [Packages, crates, and modules](modules)
 8. [Common Collections](collections)
+9. [Error Handling](errors)
 
 ## Addition materials
 * [constraints](constraints)
 
 ## Sources
 
-[LGR Cheat Sheet](https://docs.google.com/document/d/1kQidzAlbqapu-WZTuw4Djik0uTqMZYyiMXTM9F21Dz4)
+* [LGR Cheat Sheet](https://docs.google.com/document/d/1kQidzAlbqapu-WZTuw4Djik0uTqMZYyiMXTM9F21Dz4)
 
-[LGD Channel](https://www.youtube.com/c/LetsGetRusty)
+* [LGD Channel](https://www.youtube.com/c/LetsGetRusty)
 
-[Rust Book](https://doc.rust-lang.org/stable/book)
+* [Rust Book](https://doc.rust-lang.org/stable/book)
