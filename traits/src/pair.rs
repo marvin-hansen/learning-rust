@@ -1,5 +1,4 @@
 use std::fmt::Display;
-use crate::returns_summarizable;
 
 pub struct Pair<T>{
     x: T,
