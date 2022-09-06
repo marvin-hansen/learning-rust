@@ -13,6 +13,7 @@
     1. [Generic Types](generics)
     2. [Traits](traits)
     3. [Lifelines](lifelines)
+11. [Testing](testing)
 
 
 ## Addition materials
