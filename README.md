@@ -15,10 +15,12 @@
     3. [Lifelines](lifelines)
 11. [Testing](testing)
 12. [CLI Example App](cli)
+13. [Functional Language Features: Iterators and Closures](functional)
+14. 
 
 
 ## Addition materials
-* [constraints](constraints)
+* [value constraints](constraints)
 
 ## Sources
 
