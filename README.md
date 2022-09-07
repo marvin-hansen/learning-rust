@@ -14,6 +14,7 @@
     2. [Traits](traits)
     3. [Lifelines](lifelines)
 11. [Testing](testing)
+12. [CLI Example App](cli)
 
 
 ## Addition materials
