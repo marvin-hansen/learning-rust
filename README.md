@@ -16,7 +16,7 @@
 11. [Testing](testing)
 12. [CLI Example App](cli)
 13. [Functional Language Features: Iterators and Closures](functional)
-14. [Cargo](cargo)
+14. [Cargo](my_crate)
 
 
 ## Addition materials

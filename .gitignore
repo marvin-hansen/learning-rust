@@ -22,3 +22,4 @@ Cargo.lock
 /modules/*/target/
 /modules/*/target/*
 
+/my_crate/add/target/
