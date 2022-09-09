@@ -18,19 +18,19 @@ pub fn greetings(name: &str) -> String {
     return format!("Hello: {}", name);
 }
 
-pub struct Guess{
+pub struct Guess {
     value: i32,
 }
 
-impl Guess{
-    pub fn new(value: i32) -> Guess{
-        if value <1 {
+impl Guess {
+    pub fn new(value: i32) -> Guess {
+        if value < 1 {
             panic!("Guess value must be greater or equal to 1")
         } else if value > 100 {
             panic!("Guess value must less than or equal to 100")
         }
 
-        return Guess{value}
+        return Guess { value };
     }
 }
 
@@ -88,7 +88,7 @@ mod tests {
     }
 
     #[test]
-    fn test_new_valid_guess(){
+    fn test_new_valid_guess() {
         let g = Guess::new(3);
         assert_eq!(g.value, 3);
 
@@ -100,17 +100,16 @@ mod tests {
     }
 
     #[test]
-    #[should_panic(expect ="Guess value must be greater or equal to 1")] // only passes when it panics
-    fn test_new_invalid_guess_below_1(){
+    #[should_panic(expect = "Guess value must be greater or equal to 1")] // only passes when it panics
+    fn test_new_invalid_guess_below_1() {
         let g = Guess::new(-1);
     }
 
     #[test]
     #[should_panic(expect = "Guess value must less than or equal to 100")] // only passes when it panics
-    fn test_new_invalid_guess_above_100(){
+    fn test_new_invalid_guess_above_100() {
         let g = Guess::new(200);
     }
-
 }
 
 
@@ -129,6 +128,6 @@ pub mod test_utils {
             height: 1,
         };
 
-        return (larger, smaller)
+        return (larger, smaller);
     }
 }

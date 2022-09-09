@@ -35,7 +35,6 @@ pub fn basic_mutex(){
     }
 
     println!("m = {:?}", m);
-
 }
 
 pub fn shared_mutex() {

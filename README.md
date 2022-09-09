@@ -19,6 +19,7 @@
 14. [Cargo](my_crate)
 15. [Smart Pointers](smart_pointers)
 16. [Concurrency](concurrency)
+17. [Object-Oriented Programming Features of Rust](oop)
 
 
 ## Addition materials
