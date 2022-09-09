@@ -18,6 +18,7 @@
 13. [Functional Language Features: Iterators and Closures](functional)
 14. [Cargo](my_crate)
 15. [Smart Pointers](smart_pointers)
+16. [Concurrency](concurrency)
 
 
 ## Addition materials
