@@ -4,12 +4,12 @@ pub trait Summary {
 
     // Default implementation for summary
     fn summarize(&self) -> String {
-        return format!("(Read more from {} ...)", self.summarize_author());
+        format!("(Read more from {} ...)", self.summarize_author())
     }
 }
 
 
-#[derive(Debug, Clone, PartialEq, PartialOrd)]
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd)]
 pub struct NewsArticle {
     pub author: String,
     pub content: String,
@@ -19,16 +19,16 @@ pub struct NewsArticle {
 
 impl Summary for NewsArticle {
     fn summarize_author(&self) -> String {
-        return format!("{}", self.author);
+        self.author.to_string()
     }
 
     fn summarize(&self) -> String {
-        return format!("{} by:  {}", self.headline, self.author).to_string();
+        format!("{} by:  {}", self.headline, self.author)
     }
 }
 
 
-#[derive(Debug, Clone, PartialEq, PartialOrd)]
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd)]
 pub struct Tweet {
     pub username: String,
     pub content: String,
@@ -39,10 +39,10 @@ pub struct Tweet {
 
 impl Summary for Tweet {
     fn summarize_author(&self) -> String {
-        return format!("@{}", self.username);
+        format!("@{}", self.username)
     }
 
     fn summarize(&self) -> String {
-        return format!("{}: {}", self.summarize_author(), self.content).to_string();
+        format!("{}: {}", self.summarize_author(), self.content)
     }
 }

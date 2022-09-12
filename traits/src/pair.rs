@@ -7,7 +7,7 @@ pub struct Pair<T>{
 
 impl<T: Display + PartialOrd> Pair<T> {
     pub fn new(x: T, y: T) -> Self {
-        return Self { x, y }
+        Self { x, y }
     }
 }
 

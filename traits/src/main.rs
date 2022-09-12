@@ -62,7 +62,7 @@ pub fn notify_two<T: Summary+ Debug>(_item1: &T, _item2: &T) {
 
 // generic syntax may get cluttered with more constraints
 fn _some_function<T: Display + Clone, U: Clone + Debug>(_t: &T, _u: &U) -> i32 {
-    return 42
+    42
 }
 
 // Where syntax de-clutters type constraints
@@ -70,5 +70,5 @@ fn _some_function_where<T, U>(_: &T, _u: &U) -> i32
     where T: Display + Clone,
           U: Clone + Debug
 {
-    return 42
+    42
 }
