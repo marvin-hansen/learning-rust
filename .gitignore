@@ -24,3 +24,4 @@ Cargo.lock
 
 /my_crate/add/target/
 /oop/blog/target/
+/advanced/advanced_traits/target/
