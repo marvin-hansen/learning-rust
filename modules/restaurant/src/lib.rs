@@ -13,7 +13,7 @@ fn server_order() {}
 // To do so, we used add "pub: key word to the uste statement as shown below.
 
 // Re-export hosting module
-use crate::front_of_house::hosting; // makes all functions in module hosting accessible from outside
+pub use crate::front_of_house::hosting; // makes all functions in module hosting accessible from outside
 
 pub fn eat_at_restaurant() {
 

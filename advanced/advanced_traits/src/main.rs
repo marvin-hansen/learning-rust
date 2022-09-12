@@ -233,7 +233,6 @@ fn test_enum_init() {
 
 }
 
-
 // Returning Closures
 //
 // Closures are represented by traits, which means you can’t return closures directly.
