@@ -20,6 +20,7 @@
 15. [Smart Pointers](smart_pointers)
 16. [Concurrency](concurrency)
 17. [Object-Oriented Programming Features of Rust](oop)
+18. [Patterns and Matching](patterns)
 
 
 ## Addition materials
