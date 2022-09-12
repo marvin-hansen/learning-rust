@@ -1,4 +1,4 @@
-# Chapter 17: Patterns and Matching
+# Chapter 18: Patterns and Matching
 
 Patterns are a special syntax in Rust for matching against the structure of types, both complex and simple. 
 Using patterns in conjunction with match expressions and other constructs gives you more control over a program’s control flow. 
@@ -22,6 +22,9 @@ and the different kinds of pattern syntax that you might see.
 
 ## Patterns and Matching
 https://youtu.be/NzeQbiiqhgo
+
+## Pattern Syntax in Rust
+https://youtu.be/8_HPKGZGM5I
 
 ## Book 
 https://doc.rust-lang.org/stable/book/ch18-00-patterns.html 
