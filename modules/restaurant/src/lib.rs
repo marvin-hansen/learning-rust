@@ -64,7 +64,4 @@ fn rename_import(){
     fn function3() -> fmt::Result {
         Ok(())
     }
-
-
-
 }
